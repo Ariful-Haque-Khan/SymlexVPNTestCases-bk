@@ -1,0 +1,66 @@
+princeakash91@gmail.com
+
+john808_dj@hotmail.com
+6055daf964fd1c64
+
+about_us - 9
+ad_blocking_server - 9/18
+app_crushing_report_settings - 15/33
+auto_connect_settings - 8/41
+connection_page - 15/56
+enable_disable_notification_settings - 83/139
+free_bonus - 73/212
+gaming_server - 13/225
+general_settings - 9/234
+get_support - 4/238
+kill_switch - 89/327
+kill_switch_settings - 8/335
+loyalty_server - 8/343
+my_account - 10/353
+network_protection_settings - 7/360
+notification_page - 4/364
+private_browser - 9/373
+protocol_settings - 11/384
+push_notification_iphone - 27/411
+rate_us - 27/438
+redeem_voucher - 10/448
+server_page - 15/463
+sign_up - 13/476
+split_tunnel_settings - 7/483
+streaming_server - 20/503
+tools - 7/510
+windows_installation - 3/513
+
+
+GTM - 
+
+check to send request with application/json as a valid header value of Accept
+
+
+Sharminhumayra0@gmail.com
+
+
+{
+    "feedbackKeywords": [
+        "easy to use",
+        "easy connect",
+        "good ui",
+        "secure",
+        "good speed",
+        "best support",
+        "best for calling",
+        "best addons",
+        "good",
+        "smooth connection",
+        "need improvement"
+    ],
+    "feedbackEmoji": [
+        "happy",
+        "sad",
+        "expressionless",
+        "like",
+        "love"
+    ]
+}
+
+validate the JSON schema in the response body to validate
