@@ -1,0 +1,1847 @@
+{
+	"info": {
+		"_postman_id": "ceb9413e-e733-4fac-af6f-94c5f43a4df0",
+		"name": "APP API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8652670"
+	},
+	"item": [
+		{
+			"name": "Auth Related Endpoint",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"pass\": \"123456\",\r\n    \"udid\": \"555555\",\r\n    \"inAppPurchase\":1,\r\n    \"last_login_ip\": \"172.107.242.5\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/symlex-login-plain",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"symlex-login-plain"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy+kolpolok@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"country\": \"BD\",\r\n    \"should_receive_promotion\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"pass\": \"123456\",\r\n    \"udid\": \"60986a7a-e4e9-4e0f-9ccb-bd8ebe1db6bf\",\r\n    \"deleted_by\": \"rumy\",\r\n    \"is_permanent_delete\":\"yes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/remove-user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"remove-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resend-email-verification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/resend-email-verification",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"resend-email-verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset UDID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reset_udid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reset_udid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy123456.kolpolok@gmail.com\",\r\n    \"token\": \"xzzz111@0000mmmmmmm\",\r\n    \"password\": \"1234567\",\r\n    \"password_confirmation\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reset-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "purchased-transaction-history",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"24965498\",\r\n    \"pass\": \"19567\",\r\n    \"udid\": \"7CB49632-BB86-4C3C-B2B9-63197FB24303\",\r\n    \"noEncrypted\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/purchased-transaction-history",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"purchased-transaction-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove-duplicate-payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/remove-duplicate-payment",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"remove-duplicate-payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Player ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/save-player-id?username=tahera456@gmail.com&player_id=123456&device_type=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"save-player-id"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "tahera456@gmail.com"
+								},
+								{
+									"key": "player_id",
+									"value": "123456"
+								},
+								{
+									"key": "device_type",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Contact Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/save_contact_email?username=tahera456@gmail.com&contact_email=tahera456@gmail.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"save_contact_email"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "tahera456@gmail.com"
+								},
+								{
+									"key": "contact_email",
+									"value": "tahera456@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feedback",
+			"item": [
+				{
+					"name": "get-feedback-info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get-feedback-info?username=rumy.kolpolok@gmail.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-feedback-info"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "rumy.kolpolok@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save-customer-feedback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/save-customer-feedback",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"save-customer-feedback"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Referral",
+			"item": [
+				{
+					"name": "get-referral-info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"maruf@kolpolok.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get-referral-info?username=tahera456@gmail.com&referral_code&used_referral_code",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-referral-info"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "tahera456@gmail.com"
+								},
+								{
+									"key": "referral_code",
+									"value": null
+								},
+								{
+									"key": "used_referral_code",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Referral Balance Statement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get-referral-balance-statement",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-referral-balance-statement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Use Referral",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"referral_code\": \"1234567\",\r\n    \"udid\": \"8f01ad8065e20712\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/use-referral",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"use-referral"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "use-referral-reseller",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"referral_code\": \"Abc123\",\r\n    \"udid\": \"3355555\",\r\n    \"idReseller4\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/use-referral-reseller",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"use-referral-reseller"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-referral-info-reseller",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get-referral-info-reseller?idReseller4=235&username=rumy.kolpolok@gmail.com&pass=123456",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-referral-info-reseller"
+							],
+							"query": [
+								{
+									"key": "idReseller4",
+									"value": "235"
+								},
+								{
+									"key": "username",
+									"value": "rumy.kolpolok@gmail.com"
+								},
+								{
+									"key": "pass",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request For Withdraw Balance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"udid\": \"8f01ad8065e20712\",\r\n    \"withdrawAmount\": \"2.00\",\r\n    \"paymentMode\": \"1\",\r\n    \"contactCountry\": \"017999\",\r\n    \"contactName\": \"rumy\",\r\n    \"contactAddress\": \"Dhaka, Bangladesh\",\r\n    \"contactNumber\": \"8f01ad8065e20712\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get-referral-balance-statement",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-referral-balance-statement"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Server & IP",
+			"item": [
+				{
+					"name": "get_ips",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reseller4_id\": 349,\r\n    \"app_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get_ips",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_ips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_vpn_all_servers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reseller4_id\": 349,\r\n    \"app_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get_vpn_all_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_vpn_all_servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_servers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ip\": \"78.46.198.139\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_ip_details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ip\": \"78.46.198.139\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get_ip_details",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_ip_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_vpn_free_servers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ip\": \"193.228.193.250:9030\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get_vpn_free_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_vpn_free_servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_vpn_premium_servers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ip\": \"78.46.198.139:1194\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get_vpn_premium_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_vpn_premium_servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/update-ip?ips_id=313&ips_ip=25.04.2023.1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"update-ip"
+							],
+							"query": [
+								{
+									"key": "ips_id",
+									"value": "313"
+								},
+								{
+									"key": "ips_ip",
+									"value": "25.04.2023.1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data of VPN Server",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serverIds\": 111\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/getVpnServerData",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getVpnServerData"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Connection & Session",
+			"item": [
+				{
+					"name": "con-discon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"rocky1yr\",\r\n    \"pass\" : \"227782\",\r\n    \"vpnserverId\" : 283,\r\n    \"ipId\":  \"1075\",\r\n    \"connection_type\" : 1,\r\n    \"isAdmin\" : false\r\n    //\"response_type\" : \"json\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://185.174.110.126:4041/vpn_api_v2_new/public/api_v2/wireguard-user-con",
+							"protocol": "http",
+							"host": [
+								"185",
+								"174",
+								"110",
+								"126"
+							],
+							"port": "4041",
+							"path": [
+								"vpn_api_v2_new",
+								"public",
+								"api_v2",
+								"wireguard-user-con"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-logged-in-devices",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"arashid172097@bscse.uiu.ac.bd\",\r\n    \"pass\": \"1234567\",\r\n    \"udid\": \"555555\",\r\n    \"inAppPurchase\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get-logged-in-devices",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-logged-in-devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-iap-page-content",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reseller4_id\": 349,\r\n    \"app_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/get-iap-page-content",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get-iap-page-content"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save server's Current Connection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vpn_server_id\": 1,\r\n    \"connected_user\": 900000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/server_current_connection_save",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"server_current_connection_save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save User's Session",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"server_id\": 11,\r\n    \"reason\": \"remote video aon\",\r\n    \"ip_real\": \"1.4.77.78\",\r\n    \"remote_hostname\": \"vpn host\",\r\n    \"ip_local\": \"1.4.77.78\",\r\n    \"ip_remote\": \"1.4.77.78\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user_session_save",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user_session_save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Logged In Devices",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"pass\": 11111111,\r\n    \"udid\": 111\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/getUsersLoggedInDevices",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getUsersLoggedInDevices"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Auth Related Endpoint",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"tahera456@gmail.com\",\r\n    \"pass\": \"AA112233\",\r\n    \"udid\": \"555555\",\r\n    \"inAppPurchase\":1,\r\n    \"last_login_ip\": \"172.107.242.5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/symlex-login-plain",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"symlex-login-plain"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"country\": \"BD\",\r\n    \"should_receive_promotion\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/sign-up-symlex",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sign-up-symlex"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"HR4411-rumy.kolpolok@gmail.com\",\r\n    \"pass\": \"123456\",\r\n    \"udid\": \"18cb60248e7ae2bf\",\r\n    \"deleted_by\": \"jara\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/remove-user",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"remove-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resend-email-verification",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/resend-email-verification",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"resend-email-verification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset UDID",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reset_udid",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reset_udid"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset-password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"token\": \"xzzz111@0000mmmmmmm\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reset-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reset-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove-duplicate-payment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/remove-duplicate-payment",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"remove-duplicate-payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Player ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/save-player-id?username=tahera456@gmail.com&player_id=123456&device_type=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"save-player-id"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "tahera456@gmail.com"
+										},
+										{
+											"key": "player_id",
+											"value": "123456"
+										},
+										{
+											"key": "device_type",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Contact Email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/save_contact_email?username=tahera456@gmail.com&contact_email=tahera456@gmail.com",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"save_contact_email"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "tahera456@gmail.com"
+										},
+										{
+											"key": "contact_email",
+											"value": "tahera456@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Feedback",
+					"item": [
+						{
+							"name": "get-feedback-info",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get-feedback-info?username=rumy.kolpolok@gmail.com",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get-feedback-info"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "rumy.kolpolok@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save-customer-feedback",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/save-customer-feedback",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"save-customer-feedback"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Referral",
+					"item": [
+						{
+							"name": "get-referral-info",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"maruf@kolpolok.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get-referral-info?username=tahera456@gmail.com",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get-referral-info"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "tahera456@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Referral Balance Statement",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get-referral-balance-statement",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get-referral-balance-statement"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Use Referral",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"referral_code\": \"1234567\",\r\n    \"udid\": \"8f01ad8065e20712\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/use-referral",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"use-referral"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "use-referral-reseller",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"referral_code\": \"Abc123\",\r\n    \"udid\": \"3355555\",\r\n    \"idReseller4\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/use-referral-reseller",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"use-referral-reseller"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-referral-info-reseller",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get-referral-info-reseller?idReseller4=235&username=rumy.kolpolok@gmail.com&pass=123456",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get-referral-info-reseller"
+									],
+									"query": [
+										{
+											"key": "idReseller4",
+											"value": "235"
+										},
+										{
+											"key": "username",
+											"value": "rumy.kolpolok@gmail.com"
+										},
+										{
+											"key": "pass",
+											"value": "123456"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Request For Withdraw Balance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"password\": \"1234567\",\r\n    \"udid\": \"8f01ad8065e20712\",\r\n    \"withdrawAmount\": \"2.00\",\r\n    \"paymentMode\": \"1\",\r\n    \"contactCountry\": \"017999\",\r\n    \"contactName\": \"rumy\",\r\n    \"contactAddress\": \"Dhaka, Bangladesh\",\r\n    \"contactNumber\": \"8f01ad8065e20712\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get-referral-balance-statement",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get-referral-balance-statement"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Server & IP",
+					"item": [
+						{
+							"name": "get_ips",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reseller4_id\": 349,\r\n    \"app_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get_ips",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get_ips"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_vpn_all_servers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reseller4_id\": 349,\r\n    \"app_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get_vpn_all_servers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get_vpn_all_servers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_servers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ip\": \"78.46.198.139\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get_servers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get_servers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_ip_details",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ip\": \"78.46.198.139\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get_ip_details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get_ip_details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_vpn_free_servers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ip\": \"193.228.193.250:9030\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get_vpn_free_servers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get_vpn_free_servers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_vpn_premium_servers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ip\": \"78.46.198.139:1194\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get_vpn_premium_servers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get_vpn_premium_servers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update IP",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/update-ip?ips_id&ips_ip",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"update-ip"
+									],
+									"query": [
+										{
+											"key": "ips_id",
+											"value": null
+										},
+										{
+											"key": "ips_ip",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Data of VPN Server",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serverIds\": 111\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/getVpnServerData",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"getVpnServerData"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Connection & Session",
+					"item": [
+						{
+							"name": "con-discon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"fahad1yr\",\r\n    \"pass\" : \"12345\",\r\n    \"vpnserverId\" : 247,\r\n    \"ipId\":  \"822\",\r\n    \"connection_type\" : 1,\r\n    \"isAdmin\" : false,\r\n    \"response_type\" : \"json\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://185.174.110.126:4041/vpn_api_v2_new/public/api_v2/wireguard-user-con",
+									"protocol": "http",
+									"host": [
+										"185",
+										"174",
+										"110",
+										"126"
+									],
+									"port": "4041",
+									"path": [
+										"vpn_api_v2_new",
+										"public",
+										"api_v2",
+										"wireguard-user-con"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-logged-in-devices",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"arashid172097@bscse.uiu.ac.bd\",\r\n    \"pass\": \"1234567\",\r\n    \"udid\": \"555555\",\r\n    \"inAppPurchase\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get-logged-in-devices",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get-logged-in-devices"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-iap-page-content",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reseller4_id\": 349,\r\n    \"app_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/get-iap-page-content",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get-iap-page-content"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save server's Current Connection",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vpn_server_id\": 1,\r\n    \"connected_user\": 900000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/server_current_connection_save",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"server_current_connection_save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save User's Session",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"server_id\": 11,\r\n    \"reason\": \"remote video aon\",\r\n    \"ip_real\": \"1.4.77.78\",\r\n    \"remote_hostname\": \"vpn host\",\r\n    \"ip_local\": \"1.4.77.78\",\r\n    \"ip_remote\": \"1.4.77.78\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user_session_save",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user_session_save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Logged In Ddevices",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"rumy.kolpolok@gmail.com\",\r\n    \"pass\": 11111111,\r\n    \"udid\": 111\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/getUsersLoggedInDevices",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"getUsersLoggedInDevices"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
