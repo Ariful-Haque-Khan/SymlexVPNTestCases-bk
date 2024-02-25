@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "eb8822f0-1c99-47ff-b57c-d36d29c783c0",
+		"name": "feedback",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31648287",
+		"_collection_link": "https://planetary-zodiac-112685.postman.co/workspace/API-Manual-Testing---SymlexVPN~9d2c9fd8-b4be-409c-96aa-d32f50ca530b/collection/31648287-eb8822f0-1c99-47ff-b57c-d36d29c783c0?action=share&source=collection_link&creator=31648287"
+	},
+	"item": [
+		{
+			"name": "positive",
+			"item": [
+				{
+					"name": "Provide Feed Back Keywords and Feed back Emoji Agaist a PIN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Define the JSON schema that you want to validate\r",
+									"var schema = {\r",
+									"    \"feedbackKeywords\": [\r",
+									"        \"easy to use\",\r",
+									"        \"easy connect\",\r",
+									"        \"good ui\",\r",
+									"        \"secure\",\r",
+									"        \"good speed\",\r",
+									"        \"best support\",\r",
+									"        \"best for calling\",\r",
+									"        \"best addons\",\r",
+									"        \"good\",\r",
+									"        \"smooth connection\",\r",
+									"        \"need improvement\"\r",
+									"    ],\r",
+									"    \"feedbackEmoji\": [\r",
+									"        \"happy\",\r",
+									"        \"sad\",\r",
+									"        \"expressionless\",\r",
+									"        \"like\",\r",
+									"        \"love\"\r",
+									"    ]\r",
+									"};\r",
+									"\r",
+									"//Validate the response body\r",
+									"pm.test('Schema validation', () => {\r",
+									"  pm.response.to.have.jsonSchema (schema);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"//Get the response result\r",
+									"//var data = pm.response.json();\r",
+									"\r",
+									"//Validate the response body\r",
+									"// pm.test('Schema is valid', function() {\r",
+									"// pm.expect(tv4.validate(data, schema)).to.be.true;\r",
+									"// });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1111",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-CHALLENGER",
+								"value": "1102027b-d2-fb-4b19",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "bob",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n<?xml version=\"1.0\"?>\r\n<customers>\r\n   <customer id=\"55000\">\r\n      <name>Charter Group</name>\r\n      <address>\r\n         <street>100 Main</street>\r\n         <city>Framingham</city>\r\n         <state>MA</state>\r\n         <zip>01701</zip>\r\n      </address>\r\n      <address>\r\n         <street>720 Prospect</street>\r\n         <city>Framingham</city>\r\n         <state>MA</state>\r\n         <zip>01701</zip>\r\n      </address>\r\n      <address>\r\n         <street>120 Ridge</street>\r\n         <state>MA</state>\r\n         <zip>01760</zip>\r\n      </address>\r\n   </customer>\r\n</customers>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api_v2/get-feedback-info?username=md.abdullah@kolpolok.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api_v2",
+								"get-feedback-info"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "md.abdullah@kolpolok.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
