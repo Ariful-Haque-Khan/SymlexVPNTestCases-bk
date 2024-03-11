@@ -1,0 +1,1132 @@
+{
+	"info": {
+		"_postman_id": "6a0937c6-4970-4747-89e4-2c07904b13bf",
+		"name": "app_api_test_status",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31648287",
+		"_collection_link": "https://planetary-zodiac-112685.postman.co/workspace/SymlexVPN-Automation~f726c8b8-2926-4b4d-a677-63701b945b0d/collection/31648287-6a0937c6-4970-4747-89e4-2c07904b13bf?action=share&source=collection_link&creator=31648287"
+	},
+	"item": [
+		{
+			"name": "positive",
+			"item": [
+				{
+					"name": "Signup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Verification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api_v2/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api_v2",
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Logged In Devices",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Windows Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clear Cache",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Referral-Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Referral-use_referal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_ip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}sign-up-symlex",
+							"host": [
+								"{{base_url}}sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_ip_with_free",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_servers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/get_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-single_ip_details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/get_ip_details",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_ip_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_pn_free_servers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/get_vpn_free_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_vpn_free_servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_vpn_premium_servers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/get_vpn_premium_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_vpn_premium_servers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "negative",
+			"item": [
+				{
+					"name": "Signup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Verification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Logged In Devices",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Windows Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clear Cache",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Referral-Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Referral-use_referal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create a User\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"POST\",\r",
+									"        header: { \"Content-Type\": \"application/json\" },\r",
+									"        body: {\r",
+									"            mode: \"raw\",\r",
+									"            raw: JSON.stringify({\r",
+									"                \"username\": \"newuser\",\r",
+									"                \"email\": \"newuser@example.com\",\r",
+									"                \"password\": \"password123\"\r",
+									"            })\r",
+									"        }\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(201);\r",
+									"        pm.environment.set(\"userId\", response.json().id);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_ip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}sign-up-symlex",
+							"host": [
+								"{{base_url}}sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_ip_with_free",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/sign-up-symlex",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sign-up-symlex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_servers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/get_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-single_ip_details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/get_ip_details",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_ip_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_pn_free_servers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/get_vpn_free_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_vpn_free_servers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServerIP-get_all_vpn_premium_servers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Retrieve All Users\", function () {\r",
+									"    pm.sendRequest({\r",
+									"        url: pm.environment.get(\"baseURL\") + \"/api/users\",\r",
+									"        method: \"GET\"\r",
+									"    }, function (response) {\r",
+									"        pm.response.to.have.status(200);\r",
+									"        pm.response.to.have.jsonBody(\"length\", pm.greaterThan(0));\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/get_vpn_premium_servers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"get_vpn_premium_servers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
