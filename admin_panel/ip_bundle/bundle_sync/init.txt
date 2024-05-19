@@ -1,0 +1,7 @@
+1. IP List in the All App will update while Admin will act to Sync Bundle from the IP Bundle List Page.
+2. IP List in the All App will update while Admin will act Sync Bundle from the IP Assign to Batch List Page.
+3. IP List in the All App will update while Admin will act Sync Bundle from the Batch wise Assignment IP Bundle Page.
+4. IP List in the All App will update while Admin will act Sync Bundle from the Country With IP Bundle List Page.
+5. IP List in the All App will update while Admin will act Sync Bundle from the Country wise Assignment IP Bundle Page.
+6. IP List in the All App will update while Admin will act Sync Bundle from the Add New Jail PIN.
+7. IP List in the All App will update while Admin will act Sync Bundle from the edit Reseller Form.
